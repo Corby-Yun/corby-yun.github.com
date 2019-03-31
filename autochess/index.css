@@ -159,6 +159,14 @@ html {
     background: #088A29;
 }
 
+.toss{
+    zoom: 0.1;
+    transition: all ease 0.4s;
+}
+.toss:active{
+    zoom: 0.5;
+}
+
 #elf {
     width: 90px;
     color: #2a6392;
