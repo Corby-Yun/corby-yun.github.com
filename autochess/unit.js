@@ -503,13 +503,11 @@ function squad_synergy() {
     }
 
     if (beast < 2) {
-        $('.beast_synergy').text("(2)(4)(6)");
-    } else if (beast >= 6) {
-        $('.beast_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        $('.beast_synergy').text("(2)(4)");
     } else if (beast >= 4) {
-        $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (beast >= 2) {
-        $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)');
     }
     if (beast == 0) {
         $('.count_beast').css('display', 'none');
@@ -575,11 +573,9 @@ function squad_synergy() {
     }
 
     if (naga < 2) {
-        $('.naga_synergy').text("(2)(4)");
-    } else if (naga >= 4) {
-        $('.naga_synergy').html('<span style="color:white;">(2)(4)</span>');
+        $('.naga_synergy').text("(2)");
     } else if (naga >= 2) {
-        $('.naga_synergy').html('<span style="color:white;">(2)</span>(4)');
+        $('.naga_synergy').html('<span style="color:white;">(2)</span>');
     }
     if (naga == 0) {
         $('.count_naga').css('display', 'none');
