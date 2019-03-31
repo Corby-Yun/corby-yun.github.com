@@ -12,321 +12,331 @@
 </head>
 
 <body>
-    <div class="ytext">체스말 수 : <label class="count_pieces">0</label></div> <div class="ytext"><label class="over_count" style="display: none;color: #e70a0f;"></label>
-    <div style="float: right;display: inline; text-align: right;"></div><br><b>
-    <label class="count_elf" style="display: none;color: #2a6392;">엘프 x 0</label>
-    <label class="count_human" style="display: none;color: #b8bcbd;">인간 x 0</label>
-    <label class="count_beast" style="display: none;color: #00be00;">야수 x 0</label>
-    <label class="count_goblin" style="display: none;color: #801c1b;">고블린 x 0</label>
-    <label class="count_demon" style="display: none;color: #66178b;">악마 x 0</label>
-    <label class="count_undead" style="display: none;color: #3c3f41;">언데드 x 0</label>
-    <label class="count_orc" style="display: none;color: #c12629;">오크 x 0</label>
-    <label class="count_naga" style="display: none;color: #4346c1;">나가 x 0</label>
-    <label class="count_elementals" style="display: none;color: #b7ba35;">정령 x 0</label>
-    <label class="count_troll" style="display: none;color: #8f8d64;">트롤 x 0</label>
-    <label class="count_dragon" style="display: none;color: #e70a0f;">용 x 0</label>
-    <label class="count_dwarf" style="display: none;color: #ab6043;">드워프 x 0</label>
-    <label class="count_ogre" style="display: none;color: #357788;">오거 x 0</label>
-    <label class="count_satyr" style="display: none;color: #343181;">사티로스 x 0</label><br>
-    <label class="count_assassin" style="display: none;color: #f3e46e;">암살자 x 0</label>
-    <label class="count_warrior" style="display: none;color: #9d9283;">전사 x 0</label>
-    <label class="count_mage" style="display: none;color: #6da6b4;">법사 x 0</label>
-    <label class="count_warlock" style="display: none;color: #797899;">흑마 x 0</label>
-    <label class="count_hunter" style="display: none;color: #71c891;">사냥꾼 x 0</label>
-    <label class="count_knight" style="display: none;color: #b98da1;">기사 x 0</label>
-    <label class="count_mech" style="display: none;color: #816a2f;">기계 x 0</label>
-    <label class="count_druid" style="display: none;color: #8e5428;">드루이드 x 0</label>
-    <label class="count_demonhunter" style="display: none;color: #442a5c;">데몬헌터 x 0</label>
-    <label class="count_shaman" style="display: none;color: #1b3fa6;">주술사 x 0</label>
-    <label class="count_god" style="display: none;color: #FF8000;">신 x 0</label>
+    <div class="ytext">체스말 수 : <label class="count_pieces">0</label></div>
+    <div class="ytext">
+        <label class="over_count" style="display: none;color: #e70a0f;"></label>
+        <div style="float: right;display: inline; text-align: right;"></div><b>
+    발동시너지들<br>
+    <label class="count_elf" style="display: none;color: #2a6392;">엘프</label>
+    <label class="count_human" style="display: none;color: #b8bcbd;">인간</label>
+    <label class="count_beast" style="display: none;color: #00be00;">야수</label>
+    <label class="count_goblin" style="display: none;color: #801c1b;">고블린</label>
+    <label class="count_demon" style="display: none;color: #66178b;">악마</label>
+    <label class="count_undead" style="display: none;color: #0B614B;">언데드</label>
+    <label class="count_orc" style="display: none;color: #c12629;">오크</label>
+    <label class="count_naga" style="display: none;color: #4346c1;">나가</label>
+    <label class="count_elementals" style="display: none;color: #b7ba35;">정령</label>
+    <label class="count_troll" style="display: none;color: #8f8d64;">트롤</label>
+    <label class="count_dragon" style="display: none;color: #e70a0f;">용</label>
+    <label class="count_dwarf" style="display: none;color: #ab6043;">드워프</label>
+    <label class="count_ogre" style="display: none;color: #357788;">오거</label>
+    <label class="count_satyr" style="display: none;color: #343181;">사티로스</label><br>
+    <label class="count_assassin" style="display: none;color: #f3e46e;">암살자</label>
+    <label class="count_warrior" style="display: none;color: #9d9283;">전사</label>
+    <label class="count_mage" style="display: none;color: #6da6b4;">법사</label>
+    <label class="count_warlock" style="display: none;color: #797899;">흑마</label>
+    <label class="count_hunter" style="display: none;color: #71c891;">사냥꾼</label>
+    <label class="count_knight" style="display: none;color: #b98da1;">기사</label>
+    <label class="count_mech" style="display: none;color: #816a2f;">기계</label>
+    <label class="count_druid" style="display: none;color: #8e5428;">드루이드</label>
+    <label class="count_demonhunter" style="display: none;color: #442a5c;">데몬헌터</label>
+    <label class="count_shaman" style="display: none;color: #1b3fa6;">주술사</label>
+    <label class="count_god" style="display: none;color: #FF8000;">신</label>
     </div>
   </b>
-    <table style="display:inline; ">
-        <tr class="species">
-            <td>
-                <div class="ybutton bReset">체스 말<br>초기화
-                </div>
-            </td>
-            <td>
-                <div class="ybutton bTier">티어<br>OFF
-                </div>
-            </td>
-            <td>
-                <a href="./note.html">
-                    <div class="ybutton">개발자 노트</div>
-                </a>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="warrior">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력">
+        <table style="display:inline; ">
+            <tr class="species">
+                <td>
+                    <div class="ybutton bReset">체스 말<br>초기화
+                    </div>
+                </td>
+                <td>
+                    <div class="ybutton bTier">티어<br>OFF
+                    </div>
+                </td>
+                <td>
+                    <a href="./note.html">
+                        <div class="ybutton">개발자 노트</div>
+                    </a>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="job" id="warrior">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력">
                     <span id="warrior">전사</span>
                 </label>
-                <br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 axe">
-                    <img src=pieces\axe.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 tusk">
-                    <img src=pieces\tusk.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 tiny">
-                    <img src=pieces\tiny.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 mars">
-                    <img src=pieces\mars.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 juggernaut">
-                    <img src=pieces\juggernaut.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 slardar">
-                    <img src=pieces\slardar.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 lycan">
-                    <img src=pieces\lycan.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 doom">
-                    <img src=pieces\doom.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 kunkka">
-                    <img src=pieces\kunkka.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 troll_warlord">
-                    <img src=pieces\troll_warlord.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="elf">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피율 증가">
+                    <br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 axe">
+                        <img src=pieces\axe.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tusk">
+                        <img src=pieces\tusk.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tiny">
+                        <img src=pieces\tiny.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 mars">
+                        <img src=pieces\mars.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 juggernaut">
+                        <img src=pieces\juggernaut.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 slardar">
+                        <img src=pieces\slardar.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 lycan">
+                        <img src=pieces\lycan.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 doom">
+                        <img src=pieces\doom.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 kunkka">
+                        <img src=pieces\kunkka.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 troll_warlord">
+                        <img src=pieces\troll_warlord.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="elf">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피율 증가">
                     <span id="elf">엘프</span>
                 </label>
-                <br>
-                <label class="elf_synergy" style="color:#505050">(3)(6)(9)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 anti_mage">
-                    <img src=pieces\anti_mage.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 mirana">
-                    <img src=pieces\mirana.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 luna">
-                    <img src=pieces\luna.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 나이트">루나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 furion">
-                    <img src=pieces\furion.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 puck">
-                    <img src=pieces\puck.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 treant_protector">
-                    <img src=pieces\treant_protector.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 windranger">
-                    <img src=pieces\windranger.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 phantom_assassin">
-                    <img src=pieces\phantom_assassin.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 templar_assassin">
-                    <img src=pieces\templar_assassin.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="mage">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 감소">
+                    <br>
+                    <label class="elf_synergy" style="color:#505050">(3)(6)(9)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 anti_mage">
+                        <img src=pieces\anti_mage.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 mirana">
+                        <img src=pieces\mirana.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 luna">
+                        <img src=pieces\luna.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 나이트">루나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 furion">
+                        <img src=pieces\furion.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 puck">
+                        <img src=pieces\puck.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 treant_protector">
+                        <img src=pieces\treant_protector.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 windranger">
+                        <img src=pieces\windranger.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 phantom_assassin">
+                        <img src=pieces\phantom_assassin.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 templar_assassin">
+                        <img src=pieces\templar_assassin.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="job" id="mage">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 감소">
                     <span id="mage">법사</span>
                 </label>
-                <br>
-                <label class="mage_synergy" style="color:#505050">(3)(6)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 ogre_magi">
-                    <img src=pieces\ogre_magi.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 crystal">
-                    <img src=pieces\crystal.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 puck">
-                    <img src=pieces\puck.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 razor">
-                    <img src=pieces\razor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 lina">
-                    <img src=pieces\lina.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 light_keeper">
-                    <img src=pieces\light_keeper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 lich">
-                    <img src=pieces\lich.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 zeus">
-                    <img src=pieces\zeus.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 마법사">제우스</span></div>
-                </div>
-            </td>
-            <td id="ogre">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 증가">
+                    <br>
+                    <label class="mage_synergy" style="color:#505050">(3)(6)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 ogre_magi">
+                        <img src=pieces\ogre_magi.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 crystal">
+                        <img src=pieces\crystal.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 puck">
+                        <img src=pieces\puck.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 razor">
+                        <img src=pieces\razor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 lina">
+                        <img src=pieces\lina.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 light_keeper">
+                        <img src=pieces\light_keeper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 lich">
+                        <img src=pieces\lich.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 zeus">
+                        <img src=pieces\zeus.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 마법사">제우스</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="ogre">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 증가">
                     <span id="ogre">오거</span>
                 </label>
-                <br>
-                <label class="ogre_synergy" style="color:#505050">(1)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 ogre_magi">
-                    <img src=pieces\ogre_magi.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="warlock">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈부여)">
+                    <br>
+                    <label class="ogre_synergy" style="color:#505050">(1)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 ogre_magi">
+                        <img src=pieces\ogre_magi.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="warlock">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈부여)">
                     <span id="warlock">흑마</span>
                 </label>
-                <br>
-                <label class="warlock_synergy" style="color:#505050">(3)(6)</label>
-            </td>
-            <td>
-                <div class="pieces cost_2 witch_doctor">
-                    <img src=pieces\witch_doctor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 venomancer">
-                    <img src=pieces\venomancer.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 shadow_fiend">
-                    <img src=pieces\shadow_fiend.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 necrophos">
-                    <img src=pieces\necrophos.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 alchemist">
-                    <img src=pieces\alchemist.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 enigma">
-                    <img src=pieces\enigma.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 death_prophet">
-                    <img src=pieces\death_prophet.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div>
-                </div>
-            </td>
-            <td id="shaman"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 무작위 적군 변이"><span id="shaman">주술사</span></label><br><label class="shaman_synergy" style="color:#505050">(2)</label></td>
-            <td>
-                <div class="pieces cost_1 shadow_shaman">
-                    <img src=pieces\shadow_shaman.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 disruptor">
-                    <img src=pieces\disruptor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div>
-                </div>
-            </td>
-            <!--
+                    <br>
+                    <label class="warlock_synergy" style="color:#505050">(3)(6)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_2 witch_doctor">
+                        <img src=pieces\witch_doctor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 venomancer">
+                        <img src=pieces\venomancer.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 shadow_fiend">
+                        <img src=pieces\shadow_fiend.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 necrophos">
+                        <img src=pieces\necrophos.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 alchemist">
+                        <img src=pieces\alchemist.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 enigma">
+                        <img src=pieces\enigma.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 death_prophet">
+                        <img src=pieces\death_prophet.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div>
+                    </div>
+                </td>
+                <td class="job" id="shaman">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="라운드 시작시 무작위 적군 변이">
+                        <span id="shaman">주술사</span>
+                    </label>
+                    <br>
+                    <label class="shaman_synergy" style="color:#505050">(2)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 shadow_shaman">
+                        <img src=pieces\shadow_shaman.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 disruptor">
+                        <img src=pieces\disruptor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div>
+                    </div>
+                </td>
+                <!--
             <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy" style="color:#505050">(1)</label></td>
             <td> 
                 <div class="pieces cost_3 riki">
@@ -335,131 +345,173 @@
                 </div>
             </td>
             -->
-        </tr>
-        <tr class="species">
-            <td id="hunter"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 사냥꾼에게 기본공격력증가 회피무시확률부여"><span id="hunter">사냥꾼</span></label><br><label class="hunter_synergy" style="color:#505050">(3)(6)</label></td>
-            <td>
-                <div class="pieces cost_1 drow_ranger">
-                    <img src=pieces\drow_ranger.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 beastmaster">
-                    <img src=pieces\beastmaster.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 mirana">
-                    <img src=pieces\mirana.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 sniper">
-                    <img src=pieces\sniper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
-            <td>
-                <div class="pieces cost_3 windranger">
-                     <img src=pieces\windranger.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 medusa">
-                    <img src=pieces\medusa.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 tidehunter">
-                    <img src=pieces\tidehunter.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div>
-                </div>
-            </td>
-            <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위증가"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy" style="color:#505050">(1)</label></td>
-            <td>
-                <div class="pieces cost_3 sniper">
-                    <img src=pieces\sniper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
-        <td> <div class="pieces cost_5 gyrocopter"> 
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="human"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 인간이 공격시 침묵확률 부여"><span id="human">인간</span></label><br><label class="human_synergy" style="color:#505050">(2)(4)(6)</label></td>
-            <td>
-                <div class="pieces cost_2 crystal">
-                    <img src=pieces\crystal.png>
-                    <div class="name"><span data-tooltip-text="인간 법사">크리스탈</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 omniknight">
-                    <img src=pieces\omniknight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 lina">
-                    <img src=pieces\lina.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 lycan">
-                    <img src=pieces\lycan.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 kunkka">
-                    <img src=pieces\kunkka.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 light_keeper">
-                    <img src=pieces\light_keeper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 dragon_knight">
-                    <img src=pieces\dragon_knight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
-                </div>
-            </td>
-            <td id="demonhunter"><br><label class="trait_tooltip" data-tooltip-text="적군 악마효과제거(1), 아군 악마효과유지(2)"><span id="demonhunter">데몬헌터</span></label><br><label class="demonhunter_synergy" style="color:#505050">(1)(2)</label></td>
-            <td>
-                <div class="pieces cost_1 anti_mage">
-                    <img src=pieces\anti_mage.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 terrorblade">
-                    <img src=pieces\terrorblade.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 암살자에게 치명타확률과 치명타데미지 증가"><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)(9)</label></td>
-            <td>
-                <div class="pieces cost_1 bounty_hunter">
-                    <img src=pieces\bounty_hunter.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 morphling">
-                    <img src=pieces\morphling.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div>
-                </div>
-            </td>
-            <!--
+            </tr>
+            <tr class="species">
+                <td class="job" id="hunter">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 사냥꾼에게 기본공격력증가 회피무시확률부여">
+                    <span id="hunter">사냥꾼</span>
+                </label>
+                    <br>
+                    <label class="hunter_synergy" style="color:#505050">(3)(6)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 drow_ranger">
+                        <img src=pieces\drow_ranger.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 beastmaster">
+                        <img src=pieces\beastmaster.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 mirana">
+                        <img src=pieces\mirana.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 sniper">
+                        <img src=pieces\sniper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 windranger">
+                        <img src=pieces\windranger.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 medusa">
+                        <img src=pieces\medusa.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 tidehunter">
+                        <img src=pieces\tidehunter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="dwarf">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위증가">
+                    <span id="dwarf">드워프</span>
+                </label>
+                    <br>
+                    <label class="dwarf_synergy" style="color:#505050">(1)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_3 sniper">
+                        <img src=pieces\sniper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 gyrocopter">
+                        <img src=pieces\gyrocopter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="human">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 인간이 공격시 침묵확률 부여">
+                    <span id="human">인간</span>
+                            </label>
+                    <br>
+                    <label class="human_synergy" style="color:#505050">(2)(4)(6)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_2 crystal">
+                        <img src=pieces\crystal.png>
+                        <div class="name"><span data-tooltip-text="인간 법사">크리스탈</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 omniknight">
+                        <img src=pieces\omniknight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 lina">
+                        <img src=pieces\lina.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 lycan">
+                        <img src=pieces\lycan.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 kunkka">
+                        <img src=pieces\kunkka.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 light_keeper">
+                        <img src=pieces\light_keeper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 dragon_knight">
+                        <img src=pieces\dragon_knight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
+                    </div>
+                </td>
+                <td class="job" id="demonhunter">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="적군 악마효과제거(1), 아군 악마효과유지(2)">
+                    <span id="demonhunter">데몬헌터</span>
+                </label>
+                    <br>
+                    <label class="demonhunter_synergy" style="color:#505050">(1)(2)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 anti_mage">
+                        <img src=pieces\anti_mage.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 terrorblade">
+                        <img src=pieces\terrorblade.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="job" id="assassin">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 암살자에게 치명타확률과 치명타데미지 증가">
+                    <span id="assassin">암살자</span>
+                </label>
+                    <br>
+                    <label class="assassin_synergy" style="color:#505050">(3)(6)(9)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 bounty_hunter">
+                        <img src=pieces\bounty_hunter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 morphling">
+                        <img src=pieces\morphling.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div>
+                    </div>
+                </td>
+                <!--
             <td> 
                 <div class="pieces cost_2 slark">
                      <img src=pieces\slark.png>
@@ -467,19 +519,19 @@
                 </div>
             </td>
             -->
-            <td>
-                <div class="pieces cost_2 queen_of_pain">
-                    <img src=pieces\queen_of_pain.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 phantom_assassin">
-                    <img src=pieces\phantom_assassin.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div>
-                </div>
-            </td>
-            <!--
+                <td>
+                    <div class="pieces cost_2 queen_of_pain">
+                        <img src=pieces\queen_of_pain.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 phantom_assassin">
+                        <img src=pieces\phantom_assassin.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div>
+                    </div>
+                </td>
+                <!--
             <td> 
                 <div class="pieces cost_3 sand_king">
                      <img src=pieces\sand_king.png>
@@ -487,13 +539,13 @@
                 </div>
             </td>
             -->
-            <td>
-                <div class="pieces cost_3 viper">
-                    <img src=pieces\viper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div>
-                </div>
-            </td>
-            <!--
+                <td>
+                    <div class="pieces cost_3 viper">
+                        <img src=pieces\viper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div>
+                    </div>
+                </td>
+                <!--
             <td> 
                 
                 <div class="pieces cost_3 riki">
@@ -502,94 +554,94 @@
                 </div>
             </td>
             -->
-            <td>
-                <div class="pieces cost_4 templar_assassin">
-                    <img src=pieces\templar_assassin.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div>
-                </div>
-            </td>
-            <td></td>
-            <td id="god">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="타 !!종족!!시너지가 없을때 모든아군 쿨타임 감소">
+                <td>
+                    <div class="pieces cost_4 templar_assassin">
+                        <img src=pieces\templar_assassin.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div>
+                    </div>
+                </td>
+                <td></td>
+                <td class="tribe" id="god">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="타 !!종족!!시너지가 없을때 모든아군 쿨타임 감소">
                     <span id="god">신</span>
                 </label>
-                <br>
-                <label class="god_synergy" style="color:#505050">(1)(2)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 mars">
-                    <img src=pieces\mars.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 zeus">
-                    <img src=pieces\zeus.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 마법사">제우스</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="goblin">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="시너지 효과에따라 아군에게 피 리젠 버프 부여">
+                    <br>
+                    <label class="god_synergy" style="color:#505050">(1)(2)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 mars">
+                        <img src=pieces\mars.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 zeus">
+                        <img src=pieces\zeus.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="신 마법사">제우스</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="goblin">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="시너지 효과에따라 아군에게 피 리젠 버프 부여">
                     <span id="goblin">고블린</span>
                 </label>
-                <br>
-                <label class="goblin_synergy" style="color:#505050">(3)(6)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 tinker">
-                    <img src=pieces\tinker.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 clockwerk">
-                    <img src=pieces\clockwerk.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 bounty_hunter">
-                    <img src=pieces\bounty_hunter.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 timbersaw">
-                    <img src=pieces\timbersaw.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 alchemist">
-                    <img src=pieces\alchemist.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 techies">
-                    <img src=pieces\techies.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div>
-                </div>
-            </td>
-            <td id="naga">
-                <br>
-                <label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력증가">
+                    <br>
+                    <label class="goblin_synergy" style="color:#505050">(3)(6)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tinker">
+                        <img src=pieces\tinker.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 clockwerk">
+                        <img src=pieces\clockwerk.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 bounty_hunter">
+                        <img src=pieces\bounty_hunter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 timbersaw">
+                        <img src=pieces\timbersaw.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 alchemist">
+                        <img src=pieces\alchemist.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 techies">
+                        <img src=pieces\techies.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="naga">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력증가">
                     <span id="naga">나가</span>
                 </label>
-                <br>
-                <label class="naga_synergy" style="color:#505050">(2)</label>
-            </td>
-            <td>
-                <div class="pieces cost_2 slardar">
-                    <img src=pieces\slardar.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div>
-                </div>
-            </td>
-            <!--
+                    <br>
+                    <label class="naga_synergy" style="color:#505050">(2)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_2 slardar">
+                        <img src=pieces\slardar.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div>
+                    </div>
+                </td>
+                <!--
             <td> 
                 <div class="pieces cost_2 slark">
                      <img src=pieces\slark.png>
@@ -597,98 +649,112 @@
                 </div>
             </td>
             -->
-            <td>
-                <div class="pieces cost_4 medusa">
-                    <img src=pieces\medusa.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 tidehunter">
-                    <img src=pieces\tidehunter.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="knight"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기사에게 확률적으로 방어막생성 확률 부여"><span id="knight">기사</span></label><br><label class="knight_synergy" style="color:#505050">(2)(4)(6)</label></td>
-            <td>
-                <div class="pieces cost_1 bat_rider">
-                    <img src=pieces\bat_rider.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 chaos_knight">
-                    <img src=pieces\chaos_knight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 luna">
-                    <img src=pieces\luna.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 기사">루나</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 abaddon">
-                    <img src=pieces\abaddon.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 omniknight">
-                    <img src=pieces\omniknight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 dragon_knight">
-                    <img src=pieces\dragon_knight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
-                </div>
-            </td>
-            <td id="dragon"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 모든 아군 용이 풀마나로 시작함"><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(3)</label></td>
-            <td>
-                <div class="pieces cost_2 puck">
-                    <img src=pieces\puck.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 viper">
-                    <img src=pieces\viper.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 dragon_knight">
-                    <img src=pieces\dragon_knight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력증가"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 enchantress">
-                    <img src=pieces\enchantress.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 tusk">
-                    <img src=pieces\tusk.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 venomancer">
-                    <img src=pieces\venomancer.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div>
-                </div>
-            </td>
-            <!--
+                <td>
+                    <div class="pieces cost_4 medusa">
+                        <img src=pieces\medusa.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 tidehunter">
+                        <img src=pieces\tidehunter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="job" id="knight"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기사에게 확률적으로 방어막생성 확률 부여"><span id="knight">기사</span></label><br><label class="knight_synergy" style="color:#505050">(2)(4)(6)</label></td>
+                <td>
+                    <div class="pieces cost_1 bat_rider">
+                        <img src=pieces\bat_rider.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 chaos_knight">
+                        <img src=pieces\chaos_knight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 luna">
+                        <img src=pieces\luna.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 기사">루나</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 abaddon">
+                        <img src=pieces\abaddon.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 omniknight">
+                        <img src=pieces\omniknight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 dragon_knight">
+                        <img src=pieces\dragon_knight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="dragon">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="라운드 시작시 모든 아군 용이 풀마나로 시작함">
+                    <span id="dragon">용</span>
+                </label>
+                    <br>
+                    <label class="dragon_synergy" style="color:#505050">(3)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_2 puck">
+                        <img src=pieces\puck.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 viper">
+                        <img src=pieces\viper.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 dragon_knight">
+                        <img src=pieces\dragon_knight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="beast">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력증가">
+                    <span id="beast">야수</span>
+                </label>
+                    <br>
+                    <label class="beast_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 enchantress">
+                        <img src=pieces\enchantress.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tusk">
+                        <img src=pieces\tusk.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 venomancer">
+                        <img src=pieces\venomancer.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div>
+                    </div>
+                </td>
+                <!--
             <td> 
                 <div class="pieces cost_3 sand_king">
                      <img src=pieces\sand_king.png>
@@ -696,225 +762,267 @@
                 </div>
             </td>
             -->
-            <td>
-                <div class="pieces cost_3 lycan">
-                    <img src=pieces\lycan.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 lone_druid">
-                    <img src=pieces\lone_druid.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div>
-                </div>
-            </td>
-            <td id="elementals">
-                <label class="trait_tooltip" data-tooltip-text="모든 정령에게 자신을 때리는 근접유닛에게 확률적으로 석화">
+                <td>
+                    <div class="pieces cost_3 lycan">
+                        <img src=pieces\lycan.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 lone_druid">
+                        <img src=pieces\lone_druid.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="elementals">
+                    <label class="trait_tooltip" data-tooltip-text="모든 정령에게 자신을 때리는 근접유닛에게 확률적으로 석화">
                     <span id="elementals">정령</span>
                 </label>
-                <br>
-                <label class="elementals_synergy" style="color:#505050">(2)(4)</label>
-            </td>
-            <td>
-                <div class="pieces cost_1 tiny">
-                    <img src=pieces\tiny.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 morphling">
-                    <img src=pieces\morphling.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 razor">
-                    <img src=pieces\razor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 enigma">
-                    <img src=pieces\enigma.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="demon"><br><label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 추가 !순수! 데미지"><span id="demon">악마</span></label><br><label class="demon_synergy" style="color:#505050">(1)</label></td>
-            <td>
-                <div class="pieces cost_2 queen_of_pain">
-                    <img src=pieces\queen_of_pain.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 chaos_knight">
-                    <img src=pieces\chaos_knight.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 terrorblade">
-                    <img src=pieces\terrorblade.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 shadow_fiend">
-                    <img src=pieces\shadow_fiend.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 doom">
-                    <img src=pieces\doom.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div>
-                </div>
-            </td>
-            <td id="druid"><br><label class="trait_tooltip" data-tooltip-text="드루이드들은 적은양으로 진화 가능"><span id="druid">드루이드</span></label><br><label class="druid_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 enchantress">
-                    <img src=pieces\enchantress.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 furion">
-                    <img src=pieces\furion.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 treant_protector">
-                    <img src=pieces\treant_protector.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프  드루이드">트렌트</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 lone_druid">
-                    <img src=pieces\lone_druid.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 감소"><span id="undead">언데드</span></label><br><label class="undead_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 drow_ranger">
-                    <img src=pieces\drow_ranger.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_3 abaddon">
-                    <img src=pieces\abaddon.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 necrophos">
-                    <img src=pieces\necrophos.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 lich">
-                    <img src=pieces\lich.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 death_prophet">
-                    <img src=pieces\death_prophet.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div>
-                </div>
-            </td>
-            <td id="troll"><br><label class="trait_tooltip" data-tooltip-text="모든 아군트롤/아군 이 공속증가"><span id="troll">트롤</span></label><br><label class="troll_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 bat_rider">
-                    <img src=pieces\bat_rider.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 shadow_shaman">
-                    <img src=pieces\shadow_shaman.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 witch_doctor">
-                    <img src=pieces\witch_doctor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 troll_warlord">
-                    <img src=pieces\troll_warlord.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div>
-                </div>
-            </td>
-        </tr>
-        <tr class="species">
-            <td id="mech"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기계에게 피 리젠"><span id="mech">기계</span></label><br><label class="mech_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 tinker">
-                    <img src=pieces\tinker.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_1 clockwerk">
-                    <img src=pieces\clockwerk.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 timbersaw">
-                    <img src=pieces\timbersaw.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 techies">
-                    <img src=pieces\techies.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_5 gyrocopter">
-                    <img src=pieces\gyrocopter.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div>
-                </div>
-            </td>
-            <td id="orc"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 오크 체력증가"><span id="orc">오크</span></label><br><label class="orc_synergy" style="color:#505050">(2)(4)</label></td>
-            <td>
-                <div class="pieces cost_1 axe">
-                    <img src=pieces\axe.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 beastmaster">
-                    <img src=pieces\beastmaster.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_2 juggernaut">
-                    <img src=pieces\juggernaut.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div>
-                </div>
-            </td>
-            <td>
-                <div class="pieces cost_4 disruptor">
-                    <img src=pieces\disruptor.png>
-                    <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div>
-                </div>
-            </td>
-        </tr>
-    </table>
+                    <br>
+                    <label class="elementals_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tiny">
+                        <img src=pieces\tiny.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 morphling">
+                        <img src=pieces\morphling.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 razor">
+                        <img src=pieces\razor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 enigma">
+                        <img src=pieces\enigma.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="demon">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 추가 !순수! 데미지">
+                    <span id="demon">악마</span>
+                </label>
+                    <br>
+                    <label class="demon_synergy" style="color:#505050">(1)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_2 queen_of_pain">
+                        <img src=pieces\queen_of_pain.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 chaos_knight">
+                        <img src=pieces\chaos_knight.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 terrorblade">
+                        <img src=pieces\terrorblade.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 shadow_fiend">
+                        <img src=pieces\shadow_fiend.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 doom">
+                        <img src=pieces\doom.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div>
+                    </div>
+                </td>
+                <td class="job" id="druid">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="드루이드들은 적은양으로 진화 가능">
+                    <span id="druid">드루이드</span>
+                </label>
+                    <br>
+                    <label class="druid_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 enchantress">
+                        <img src=pieces\enchantress.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 furion">
+                        <img src=pieces\furion.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 treant_protector">
+                        <img src=pieces\treant_protector.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프  드루이드">트렌트</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 lone_druid">
+                        <img src=pieces\lone_druid.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="tribe" id="undead">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 감소">
+                    <span id="undead">언데드</span>
+                </label>
+                    <br>
+                    <label class="undead_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 drow_ranger">
+                        <img src=pieces\drow_ranger.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_3 abaddon">
+                        <img src=pieces\abaddon.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 necrophos">
+                        <img src=pieces\necrophos.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 lich">
+                        <img src=pieces\lich.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 death_prophet">
+                        <img src=pieces\death_prophet.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="troll">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군트롤/아군 이 공속증가">
+                    <span id="troll">트롤</span>
+                </label>
+                    <br>
+                    <label class="troll_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 bat_rider">
+                        <img src=pieces\bat_rider.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 shadow_shaman">
+                        <img src=pieces\shadow_shaman.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 witch_doctor">
+                        <img src=pieces\witch_doctor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 troll_warlord">
+                        <img src=pieces\troll_warlord.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="species">
+                <td class="job" id="mech">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 기계에게 피 리젠">
+                    <span id="mech">기계</span>
+                </label>
+                    <br>
+                    <label class="mech_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 tinker">
+                        <img src=pieces\tinker.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_1 clockwerk">
+                        <img src=pieces\clockwerk.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 timbersaw">
+                        <img src=pieces\timbersaw.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 techies">
+                        <img src=pieces\techies.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_5 gyrocopter">
+                        <img src=pieces\gyrocopter.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div>
+                    </div>
+                </td>
+                <td class="tribe" id="orc">
+                    <br>
+                    <label class="trait_tooltip" data-tooltip-text="모든 아군 오크 체력증가">
+                    <span id="orc">오크</span>
+                </label>
+                    <br>
+                    <label class="orc_synergy" style="color:#505050">(2)(4)</label>
+                </td>
+                <td>
+                    <div class="pieces cost_1 axe">
+                        <img src=pieces\axe.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 beastmaster">
+                        <img src=pieces\beastmaster.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_2 juggernaut">
+                        <img src=pieces\juggernaut.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="pieces cost_4 disruptor">
+                        <img src=pieces\disruptor.png>
+                        <div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
 </body>
 
 </html>

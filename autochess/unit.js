@@ -117,12 +117,12 @@ riki = ['riki', 'satyr', 'assassin'];
 ogre_magi = ['ogre_magi', 'ogre', 'mage'];
 
 //신
-mars = ['mars','god','warrior'];
-zeus = ['zeus','god','mage'];
+mars = ['mars', 'god', 'warrior'];
+zeus = ['zeus', 'god', 'mage'];
 
 $(function () {
     $('.bReset').click(function () {
-        elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0, god=0;
+        elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0, god = 0;
         assassin = 0, warrior = 0, mage = 0, warlock = 0, hunter = 0, knight = 0, mech = 0, druid = 0, demonhunter = 0, shaman = 0;
         pieces_num = 0;
         $('.pieces > img').css('opacity', '0.3');
@@ -130,19 +130,18 @@ $(function () {
         squad_synergy();
     });
     $('.bTier').text('티어\nOFF');
-     $(".bTier").mousedown(function () {
-         alert("티어기능은 점검중입니다.");
-         if ($('.bTier').text() == '티어\nON'){
-             //$('.bTier').text('티어\nOFF');
-             //$('.tier').css("display","none");
-         }
-         else{
-             //$('.bTier').text('티어\nON');
-             //$('.tier').css("display","inline");
-         }
+    $(".bTier").mousedown(function () {
+        alert("티어기능은 점검중입니다.");
+        if ($('.bTier').text() == '티어\nON') {
+            //$('.bTier').text('티어\nOFF');
+            //$('.tier').css("display","none");
+        } else {
+            //$('.bTier').text('티어\nON');
+            //$('.tier').css("display","inline");
+        }
     });
-    $(".bTier").hover(function(){
-        
+    $(".bTier").hover(function () {
+
     });
     $('.anti_mage').mousedown(function (e) {
         potrait_opacity(anti_mage, e.which);
@@ -331,7 +330,7 @@ $(function () {
     $('.ogre_magi').mousedown(function (e) {
         potrait_opacity(ogre_magi, e.which);
     });
-    
+
     $('.mars').mousedown(function (e) {
         potrait_opacity(mars, e.which);
     });
@@ -396,7 +395,7 @@ function potrait_opacity(unit_name, input) {
                     demonhunter++;
                 } else if (unit_name[i] == 'shaman') {
                     shaman++;
-                } else if (unit_name[i] == 'god'){
+                } else if (unit_name[i] == 'god') {
                     god++;
                 }
             }
@@ -453,7 +452,7 @@ function potrait_opacity(unit_name, input) {
                     demonhunter--;
                 } else if (unit_name[i] == 'shaman') {
                     shaman--;
-                }else if (unit_name[i] == 'god'){
+                } else if (unit_name[i] == 'god') {
                     god--;
                 }
             }
@@ -470,351 +469,252 @@ function squad_synergy() {
     } else {
         $('.over_count').css('display', 'none');
     }
+
     if (elf < 3) {
         $('.elf_synergy').text('(3)(6)(9)');
+        $('.count_elf').css('display', 'none');
     } else if (elf >= 9) {
         $('.elf_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
     } else if (elf >= 6) {
         $('.elf_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
     } else if (elf >= 3) {
-        $('.elf_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-    }
-    if (elf == 0) {
-        $('.count_elf').css('display', 'none');
-    } else {
         $('.count_elf').css('display', 'inline');
-        $('.count_elf').text("엘프 x " + elf);
+        $('.elf_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
     }
 
     if (human < 2) {
         $('.human_synergy').text("(2)(4)(6)");
+        $('.count_human').css('display', 'none');
     } else if (human >= 6) {
         $('.human_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
     } else if (human >= 4) {
         $('.human_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
     } else if (human >= 2) {
         $('.human_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
-    }
-    if (human == 0) {
-        $('.count_human').css('display', 'none');
-    } else {
         $('.count_human').css('display', 'inline');
-        $('.count_human').text("인간 x " + human);
     }
 
     if (beast < 2) {
         $('.beast_synergy').text("(2)(4)");
+        $('.count_beast').css('display', 'none');
     } else if (beast >= 4) {
         $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (beast >= 2) {
         $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (beast == 0) {
-        $('.count_beast').css('display', 'none');
-    } else {
         $('.count_beast').css('display', 'inline');
-        $('.count_beast').text("야수 x " + beast);
     }
 
     if (goblin < 3) {
         $('.goblin_synergy').text("(3)(6)");
+        $('.count_goblin').css('display', 'none');
     } else if (goblin >= 6) {
         $('.goblin_synergy').html('<span style="color:white;">(3)(6)</span>');
     } else if (goblin >= 3) {
         $('.goblin_synergy').html('<span style="color:white;">(3)</span>(6)');
-    }
-    if (goblin == 0) {
-        $('.count_goblin').css('display', 'none');
-    } else {
         $('.count_goblin').css('display', 'inline');
-        $('.count_goblin').text("고블린 x " + goblin);
     }
 
     if (demon < 1) {
         $('.demon_synergy').text("(1)");
+        $('.count_demon').css('display', 'none');
     } else if (demon == 1) {
         $('.demon_synergy').html('<span style="color:white;">(1)</span>');
-    }
-    if (demon == 0) {
-        $('.count_demon').css('display', 'none');
-    } else {
         $('.count_demon').css('display', 'inline');
-        $('.count_demon').text("악마 x " + demon);
     }
 
     if (undead < 2) {
         $('.undead_synergy').text("(2)(4)");
+        $('.count_undead').css('display', 'none');
     } else if (undead >= 6) {
         $('.undead_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
     } else if (undead >= 4) {
         $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (undead >= 2) {
         $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (undead == 0) {
-        $('.count_undead').css('display', 'none');
-    } else {
         $('.count_undead').css('display', 'inline');
-        $('.count_undead').text("언데드 x " + undead);
     }
 
     if (orc < 2) {
         $('.orc_synergy').text("(2)(4)");
+        $('.count_orc').css('display', 'none');
     } else if (orc >= 4) {
         $('.orc_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (orc >= 2) {
         $('.orc_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (orc == 0) {
-        $('.count_orc').css('display', 'none');
-    } else {
         $('.count_orc').css('display', 'inline');
-        $('.count_orc').text("오크 x " + orc);
     }
 
     if (naga < 2) {
         $('.naga_synergy').text("(2)");
+        $('.count_naga').css('display', 'none');
     } else if (naga >= 2) {
         $('.naga_synergy').html('<span style="color:white;">(2)</span>');
-    }
-    if (naga == 0) {
-        $('.count_naga').css('display', 'none');
-    } else {
         $('.count_naga').css('display', 'inline');
-        $('.count_naga').text("나가 x " + naga);
     }
 
     if (elementals < 2) {
         $('.elementals_synergy').text("(2)(4)");
+        $('.count_elementals').css('display', 'none');
     } else if (elementals >= 4) {
         $('.elementals_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (elementals >= 2) {
         $('.elementals_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (elementals == 0) {
-        $('.count_elementals').css('display', 'none');
-    } else {
         $('.count_elementals').css('display', 'inline');
-        $('.count_elementals').text("정령 x " + elementals);
     }
 
     if (troll < 2) {
         $('.troll_synergy').text("(2)(4)");
+        $('.count_troll').css('display', 'none');
     } else if (troll >= 4) {
         $('.troll_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (troll >= 2) {
         $('.troll_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (troll == 0) {
-        $('.count_troll').css('display', 'none');
-    } else {
         $('.count_troll').css('display', 'inline');
-        $('.count_troll').text("트롤 x " + troll);
     }
 
     if (dragon < 3) {
         $('.dragon_synergy').text("(3)");
+        $('.count_dragon').css('display', 'none');
     } else if (dragon == 3) {
         $('.dragon_synergy').html('<span style="color:white;">(3)</span>');
-    }
-    if (dragon == 0) {
-        $('.count_dragon').css('display', 'none');
-    } else {
         $('.count_dragon').css('display', 'inline');
-        $('.count_dragon').text("용 x " + dragon);
     }
 
     if (dwarf < 1) {
         $('.dwarf_synergy').text("(1)");
+        $('.count_dwarf').css('display', 'none');
     } else if (dwarf == 1) {
         $('.dwarf_synergy').html('<span style="color:white;">(1)</span>');
-    }
-    if (dwarf == 0) {
-        $('.count_dwarf').css('display', 'none');
-    } else {
         $('.count_dwarf').css('display', 'inline');
-        $('.count_dwarf').text("드워프 x " + dwarf);
     }
 
     if (satyr < 1) {
         $('.satyr_synergy').text("(1)");
+        $('.count_satyr').css('display', 'none');
     } else if (satyr == 1) {
         $('.satyr_synergy').html('<span style="color:white;">(1)</span>');
-    }
-    if (satyr == 0) {
-        $('.count_satyr').css('display', 'none');
-    } else {
         $('.count_satyr').css('display', 'inline');
-        $('.count_satyr').text("사티로스 x " + satyr);
     }
 
     if (ogre < 1) {
         $('.ogre_synergy').text("(1)");
+        $('.count_ogre').css('display', 'none');
     } else if (ogre == 1) {
         $('.ogre_synergy').html('<span style="color:white;">(1)</span>');
-    }
-    if (ogre == 0) {
-        $('.count_ogre').css('display', 'none');
-    } else {
         $('.count_ogre').css('display', 'inline');
-        $('.count_ogre').text("오거 x " + ogre);
     }
 
     if (assassin < 3) {
         $('.assassin_synergy').text("(3)(6)(9)");
+        $('.count_assassin').css('display', 'none');
     } else if (assassin >= 9) {
         $('.assassin_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
     } else if (assassin >= 6) {
         $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
     } else if (assassin >= 3) {
         $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-    }
-    if (assassin == 0) {
-        $('.count_assassin').css('display', 'none');
-    } else {
         $('.count_assassin').css('display', 'inline');
-        $('.count_assassin').text("암살자 x " + assassin);
     }
 
     if (warrior < 3) {
         $('.warrior_synergy').text("(3)(6)(9)");
+        $('.count_warrior').css('display', 'none');
     } else if (warrior >= 9) {
         $('.warrior_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
     } else if (warrior >= 6) {
         $('.warrior_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
     } else if (warrior >= 3) {
         $('.warrior_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-    }
-    if (warrior == 0) {
-        $('.count_warrior').css('display', 'none');
-    } else {
         $('.count_warrior').css('display', 'inline');
-        $('.count_warrior').text("전사 x " + warrior);
     }
 
     if (mage < 3) {
         $('.mage_synergy').text("(3)(6)");
+        $('.count_mage').css('display', 'none');
     } else if (mage >= 6) {
         $('.mage_synergy').html('<span style="color:white;">(3)(6)</span>');
     } else if (mage >= 3) {
         $('.mage_synergy').html('<span style="color:white;">(3)</span>(6)');
-    }
-    if (mage == 0) {
-        $('.count_mage').css('display', 'none');
-    } else {
         $('.count_mage').css('display', 'inline');
-        $('.count_mage').text("법사 x " + mage);
     }
 
     if (warlock < 3) {
         $('.warlock_synergy').text("(3)(6)");
+        $('.count_warlock').css('display', 'none');
     } else if (warlock >= 6) {
         $('.warlock_synergy').html('<span style="color:white;">(3)(6)</span>');
     } else if (warlock >= 3) {
         $('.warlock_synergy').html('<span style="color:white;">(3)</span>(6)');
-    }
-    if (warlock == 0) {
-        $('.count_warlock').css('display', 'none');
-    } else {
         $('.count_warlock').css('display', 'inline');
-        $('.count_warlock').text("흑마 x " + warlock);
     }
 
     if (hunter < 3) {
         $('.hunter_synergy').text("(3)(6)");
+        $('.count_hunter').css('display', 'none');
     } else if (hunter >= 6) {
         $('.hunter_synergy').html('<span style="color:white;">(3)(6)</span>');
     } else if (hunter >= 3) {
         $('.hunter_synergy').html('<span style="color:white;">(3)</span>(6)');
-    }
-    if (hunter == 0) {
-        $('.count_hunter').css('display', 'none');
-    } else {
         $('.count_hunter').css('display', 'inline');
-        $('.count_hunter').text("사냥꾼 x " + hunter);
     }
 
     if (knight < 2) {
         $('.knight_synergy').text("(2)(4)(6)");
+        $('.count_knight').css('display', 'none');
     } else if (knight >= 6) {
         $('.knight_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
     } else if (knight >= 4) {
         $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
     } else if (knight >= 2) {
         $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
-    }
-    if (knight == 0) {
-        $('.count_knight').css('display', 'none');
-    } else {
         $('.count_knight').css('display', 'inline');
-        $('.count_knight').text("기사 x " + knight);
     }
 
     if (mech < 2) {
         $('.mech_synergy').text("(2)(4)");
+        $('.count_mech').css('display', 'none');
     } else if (mech >= 4) {
         $('.mech_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (mech >= 2) {
         $('.mech_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (mech == 0) {
-        $('.count_mech').css('display', 'none');
-    } else {
         $('.count_mech').css('display', 'inline');
-        $('.count_mech').text("기계 x " + mech);
     }
 
     if (druid < 2) {
         $('.druid_synergy').text("(2)(4)");
+        $('.count_druid').css('display', 'none');
     } else if (druid >= 4) {
         $('.druid_synergy').html('<span style="color:white;">(2)(4)</span>');
     } else if (druid >= 2) {
         $('.druid_synergy').html('<span style="color:white;">(2)</span>(4)');
-    }
-    if (druid == 0) {
-        $('.count_druid').css('display', 'none');
-    } else {
         $('.count_druid').css('display', 'inline');
-        $('.count_druid').text("드루이드 x " + druid);
     }
 
     if (demonhunter < 1) {
         $('.demonhunter_synergy').text("(1)(2)");
+        $('.count_demonhunter').css('display', 'none');
     } else if (demonhunter == 1) {
         $('.demonhunter_synergy').html('<span style="color:white;">(1)</span>(2)');
+        $('.count_demonhunter').css('display', 'inline');
     } else if (demonhunter == 2) {
         $('.demonhunter_synergy').html('<span style="color:white;">(1)(2)</span>');
-    }
-    if (demonhunter == 0) {
-        $('.count_demonhunter').css('display', 'none');
-    } else {
-        $('.count_demonhunter').css('display', 'inline');
-        $('.count_demonhunter').text("데몬헌터 x " + demonhunter);
     }
 
     if (shaman < 2) {
         $('.shaman_synergy').text("(2)");
+        $('.count_shaman').css('display', 'none');
     } else if (shaman == 2) {
         $('.shaman_synergy').html('<span style="color:white;">(2)</span>');
-    }
-    if (shaman == 0) {
-        $('.count_shaman').css('display', 'none');
-    } else {
         $('.count_shaman').css('display', 'inline');
-        $('.count_shaman').text("샤먼 x " + shaman);
     }
-    
+
     if (god < 1) {
         $('.god_synergy').text("(1)(2)");
+        $('.count_god').css('display', 'none');
     } else if (shaman == 1) {
         $('.god_synergy').html('<span style="color:white;">(1)</span>(2)');
-    }else if (shaman == 2) {
-        $('.god_synergy').html('<span style="color:white;">(1)(2)</span>');
-    }
-    if (god == 0) {
-        $('.count_god').css('display', 'none');
-    } else {
         $('.count_god').css('display', 'inline');
-        $('.count_god').text("신 x " + god);
+    } else if (shaman == 2) {
+        $('.god_synergy').html('<span style="color:white;">(1)(2)</span>');
     }
 }

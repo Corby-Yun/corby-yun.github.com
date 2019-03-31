@@ -43,12 +43,16 @@ html {
     transition: all ease 0.2s;
 }
 
+.pieces img:hover {
+    opacity: 1;
+}
+
 .ytext {
+    font-family: 'Nanum Gothic';
     background: #2f2f2f;
 
     transition: all ease 0.2s;
     color: #fff;
-    padding: 2px;
     position: relative;
 }
 
@@ -59,6 +63,7 @@ html {
 
 
 .ybutton {
+    font-family: 'Nanum Gothic';
     width: 80%;
     height: 50%;
     background: #2f2f2f;
@@ -85,13 +90,6 @@ html {
     position: absolute;
     bottom: 12px;
     left: 6px;
-}
-
-.effect {
-    vertical-align: middle;
-    font-size: 14px;
-    padding: 0px;
-    display: none;
 }
 
 .trait {
@@ -144,6 +142,23 @@ html {
     color: #A9F5A9;
 }
 
+.tribe{
+    transition: all ease 0.4s;
+    background: #3B0B0B;
+}
+.tribe:hover{
+    background: #B40404;
+}
+
+
+.job{
+    transition: all ease 0.4s;
+     background: #0B3B0B;
+}
+.job:hover{
+    background: #088A29;
+}
+
 #elf {
     width: 90px;
     color: #2a6392;
@@ -191,7 +206,7 @@ html {
 
 #undead {
     width: 90px;
-    color: #3c3f41;
+    color: #0B614B;
     vertical-align: middle;
     text-align: center;
     font-weight: 900;
@@ -398,7 +413,6 @@ html {
 }
 
 [data-tooltip-text]:after {
-    z-index: 1;
     font-weight: 0;
     background: #000;
     color: #fffff;
@@ -416,6 +430,7 @@ html {
 }
 
 [data-tooltip-text]:hover:after {
+    z-index: 2;
     font-weight: 900;
     top: 130%;
     left: 0;
