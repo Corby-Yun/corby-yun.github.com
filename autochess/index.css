@@ -13,6 +13,10 @@ html {
     font-family: 'Nanum Gothic';
 }
 
+.toss{
+    zoom: 0.5;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     /* remove scrollbar space */
@@ -157,14 +161,6 @@ html {
 }
 .job:hover{
     background: #088A29;
-}
-
-.toss{
-    zoom: 0.1;
-    transition: all ease 0.4s;
-}
-.toss:active{
-    zoom: 0.5;
 }
 
 #elf {
