@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>  
+<html>  
+<meta charset="utf-8">  
+<style>
+    html {
+    font-family: 'Nanum Gothic';
+}
+</style>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&lang=sql&skin=desert"></script>
+<head>  
+    <title>Yunwol page</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+</head>  
+<body>  
+    <div class="header"><h1>Yunwol Page Javescript</h1></div>
+        <br>
+        <div class="info">
+        <h2>리터럴</h2>
+        <p>리터럴은 프로그램에 직접 나타나는 데이터 값이다.</p>
+        <pre class="prettyprint"> 
+    12              // 숫자 12
+    1.2             // 숫자 1.2
+    "hello world"   // 문자열
+    'Hi'            // 문자열의 또다른 표현
+    true            // 참을 뜻하는 불리언값
+    false           // 거짓을 뜻하는 불리언값
+    /javascript/gi  // '정규 표현식' 리터럴(패턴 매칭용)
+    null            // 객체가 존재하지 않음을 뜻함
+    { x:1, y:2 }    // 객체 초기자
+    [1,2,3,4,5]     // 배열 초기자
+        </pre>
+        <br>
+        <h2>식별자</h2>
+        <p>식별자는 간단히 이름이며 변수, 함수, 레이블을 붙이는데에 사용된다.</p>
+        <p>식별자의 시작은 알파벳(문자를 의미함), 언더바, 달러 표시여야한다.</p>
+        <p>다음은 올바른 식별자이다.</p>
+        <pre class="prettyprint"> 
+    i
+    my_value_name
+    v13
+    _dummy
+    $str
+        </pre>
+        <p>일반적으로 ASCII 문자만 사용하지만, ECMAScript 표준에서는 유니코드 문자에 속한 모든 문자를 사용할수 있다.</p>
+        <p>이러한 점은 수학 기호나 비영어권 지역에서 경우에 따라 유용하게 사용된다.</p>
+        <br>
+        <h2>선택적인 세미콜론 사용</h2>
+        <p>자바스크립트가 항상 모든 줄바꿈을 세미콜론으로 해석하는 것이 아니다.</p>
+        <p>자바스크립트는 다음줄에 나오는 공백아닌 첫 문자를 현재 문장과 이어서 해석 못할때만 줄바꿈을 세미콜론으로 취급한다.</p>
+        <pre class="prettyprint"> 
+    var a
+    a
+    =
+    3
+    console.log(a)
+        </pre>
+        <p>자바스크립트는 이 코드를 담음과 같이 해석한다.</p>
+        <pre class="prettyprint"> 
+    var a; a = 3; console.log(a);
+        </pre>
+        <p>코드작성자가 의도한 코드는 aa라는 변수를 선언과 동시에 3으로 초기화 하는것인데</p>
+        <p>자바스크립트는 aa 라는 선언을 해석할수 없기에 첫 줄바꿈을 세미콜론으로 취급하고,</p>
+        <p>a는 a; 라는 명령문으로 해석할수 있지만 a = 3는 해석될수 있기에 두번째 줄바꿈은 세미콜론으로 해석되지않는다.</p>
+        <pre class="prettyprint"> 
+    var y = x + f
+    (a+b).toString()
+        </pre>
+        <p>위와 같은 경우는 f라는 식별자를 함수로 해석될수도 있기에 다음과 같이 해석한다.</p>
+        <pre class="prettyprint"> 
+    var y = x + f(a+b).toString();
+        </pre>
+        <p>위같은 경우를 의도한 코드가 아니라면 세미콜론을 명시해야 한다.</p>
+        <p>그냥 내생각엔 써주자</p>
+    </div>
+    <br>
+    <h1>이진 부동소수점과 반올림 오류</h1>
+    
+</body>  
+</html>                         
