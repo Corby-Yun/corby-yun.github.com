@@ -1,0 +1,37 @@
+body{
+    font-size: 30px;
+    background: #2f2f2f;
+}
+
+.minecraft{
+    display: inline-block;
+}
+.mojang{
+    display: inline-block;
+}
+
+.status {
+    text-align: center;
+    padding: 10vw 1vw 10vw 1vw;
+}
+
+.element {
+    font-family: 'Nanum Gothic';
+    color: #2f2f2f;
+
+    position: relative;
+    padding: 1vw 1vw 1vw 1vw;
+    margin: 1vw 1vw 1vw 1vw;
+
+    transition: all ease 0.1s;
+}
+
+.green {
+    background: green;
+}
+.yellow {
+    background: yellow;
+}
+.red {
+    background: red;
+}
